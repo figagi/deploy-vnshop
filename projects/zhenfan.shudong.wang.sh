@@ -1,6 +1,6 @@
 #!/bin/bash
  
-WEB_PATH='/home/wwwroot/shudong.wang'
+WEB_PATH='/home/wwwroot/zhenfan'
 WEB_USER='root'
 WEB_USERGROUP='root'
  
@@ -13,8 +13,5 @@ git pull
 git checkout master
 echo "changing permissions..."
 chown -R $WEB_USER:$WEB_USERGROUP $WEB_PATH
-#sudo pm2 stop surmon.me
-#pm2 stop nodepress
-#npm run build && sudo pm2 restart surmon.me
-#pm2 restart nodepress
+npm run bulid
 echo "Finished."
