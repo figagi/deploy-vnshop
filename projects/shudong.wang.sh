@@ -1,6 +1,6 @@
 #!/bin/bash
  
-WEB_PATH='/home/wwwroot/zhenfan'
+WEB_PATH='/home/wwwroot/shudong.wang'
 WEB_USER='root'
 WEB_USERGROUP='root'
  

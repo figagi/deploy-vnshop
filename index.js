@@ -1,11 +1,11 @@
 const http = require('http')
 const shell = require('shelljs')
 const createHandler = require('github-webhook-handler')
-const handler = createHandler({ path: '/webhook', secret: 'zhenfan.shudong.wang' })
+const handler = createHandler({ path: '/webhook', secret: 'shudong' })
 // 上面的 secret 保持和 GitHub 后台设置的一致
 
 const port = 9988
-const projects = ['shudong.wang','deploy']
+const projects = ['shudong.wang','admin.shudong.wang','api.shudong.wang','deploy']  
 
 const projectHandler = (event, action) => {
 	const project = event.payload.repository.name
@@ -42,4 +42,3 @@ handler.on('error', err => {
 
 handler.on('push', event => { projectHandler(event, 'push') })
 handler.on('commit_comment', event => { projectHandler(event, 'commit') })
-
